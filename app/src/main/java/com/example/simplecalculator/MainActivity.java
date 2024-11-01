@@ -30,6 +30,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonMul = findViewById(R.id.btn_mul);
         buttonDiv = findViewById(R.id.btn_div);
         textView = findViewById(R.id.answer);
+
+        //устанавливаем обработчик для всех кнопок
+        buttonAdd.setOnClickListener(this);
+        buttonSub.setOnClickListener(this);
+        buttonMul.setOnClickListener(this);
+        buttonDiv.setOnClickListener(this);
     }
 
     public int getIntFromEditText(EditText editText) {
@@ -48,5 +54,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
        num1 = getIntFromEditText(editTextNum1);
        num2 = getIntFromEditText(editTextNum2);
+        //по id определяем кнопку, вызвавшую этот обработчик
+        int id = view.getId();
+        if (id == R.id.btn_add) {
+            //пишем код обработки нажатия кнопки +
+            textView.setText("Ответ = " + (num1 + num2));
+        } else if (id == R.id.btn_sub) {
+            //пишем код обработки нажатия кнопки -
+            textView.setText("Ответ = " + (num1 - num2));
+        } else if (id == R.id.btn_mul) {
+            //пишем код обработки нажатия кнопки ×
+            textView.setText("Ответ = " + (num1 * num2));
+        } else if (id == R.id.btn_div) {
+            //пишем код обработки нажатия кнопки ÷
+            textView.setText("Ответ = " + ((float) num1 / (float) num2));
+        }
     }
 }

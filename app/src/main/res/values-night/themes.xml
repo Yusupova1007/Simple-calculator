@@ -1,5 +1,5 @@
 <resources>
     <style name="Base.Theme.SimpleCalculator" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimary">@color/primary</item>
     </style>
 </resources>

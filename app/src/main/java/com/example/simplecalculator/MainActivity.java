@@ -57,16 +57,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //по id определяем кнопку, вызвавшую этот обработчик
         int id = view.getId();
         if (id == R.id.btn_add) {
-            //пишем код обработки нажатия кнопки +
+            //обработка нажатия кнопки +
             textView.setText("Ответ = " + (num1 + num2));
         } else if (id == R.id.btn_sub) {
-            //пишем код обработки нажатия кнопки -
+            //обработка нажатия кнопки -
             textView.setText("Ответ = " + (num1 - num2));
         } else if (id == R.id.btn_mul) {
-            //пишем код обработки нажатия кнопки ×
+            //обработка нажатия кнопки ×
             textView.setText("Ответ = " + (num1 * num2));
         } else if (id == R.id.btn_div) {
-            //пишем код обработки нажатия кнопки ÷
+            //обработка нажатия кнопки ÷
             textView.setText("Ответ = " + ((float) num1 / (float) num2));
         }
     }
